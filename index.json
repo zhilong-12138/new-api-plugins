@@ -1056,6 +1056,94 @@
       ]
     },
     {
+      "key": "bailian-decision",
+      "name": "Alibaba Bailian Decision",
+      "icon": "Bailian.Color",
+      "website": "https://www.alibabacloud.com/help/en/model-studio/decision-model-api",
+      "description": {
+        "en": "Alibaba Bailian structured decision model via System One API",
+        "zh": "阿里百炼结构化决策模型，基于 System One 协议同步判断"
+      },
+      "routes": [
+        {
+          "method": "POST",
+          "path": "/compatible-mode/v1/systemone",
+          "type": "submit",
+          "decode": "decodeSystemOne",
+          "render": "renderSystemOne",
+          "retainResult": false
+        },
+        {
+          "method": "POST",
+          "path": "/v1/systemone",
+          "type": "submit",
+          "decode": "decodeSystemOne",
+          "render": "renderSystemOne",
+          "retainResult": false
+        }
+      ],
+      "usageSchema": {
+        "input_tokens": {
+          "type": "number",
+          "unit": "token",
+          "description": {
+            "en": "Input token unit price",
+            "zh": "输入 token 单价"
+          }
+        }
+      },
+      "usageExamples": [
+        {
+          "label": "Decision",
+          "facts": {
+            "input_tokens": 1000
+          }
+        }
+      ],
+      "usageProfiles": null,
+      "channelTypes": [
+        17
+      ],
+      "models": [
+        "decision-model-preview",
+        "decision-model-preview-2026-09-24"
+      ],
+      "task": true,
+      "provider": false,
+      "transform": false,
+      "latest": "1.0.0",
+      "versions": [
+        {
+          "version": "1.0.0",
+          "path": "plugins/tasks/bailian-decision/1.0.0/plugin.js",
+          "sha256": "581faddbc095fbb8855a2bcd608ee451565ca83ed389de29bd0bbe0c7a834c2b",
+          "minApiVersion": 1,
+          "kind": "task",
+          "auth": "api_key",
+          "readme": {
+            "path": "plugins/tasks/bailian-decision/README.md",
+            "sha256": "ad011e701985cab08dd4cfec8319049fd939a32671f65f5891d28babe7db62c7",
+            "translations": {
+              "zh-CN": {
+                "path": "plugins/tasks/bailian-decision/README.zh-CN.md",
+                "sha256": "cfb97ae2e7f5f69cd687767331d7959865576b4d0955f426fd4deffed8ac1785"
+              }
+            }
+          },
+          "changelog": {
+            "path": "plugins/tasks/bailian-decision/1.0.0/CHANGELOG.md",
+            "sha256": "53882ace02e96f9111cdcf513590c1f7a65575aee09a2e3c8ca539f5d00e6cbd",
+            "translations": {
+              "zh-CN": {
+                "path": "plugins/tasks/bailian-decision/1.0.0/CHANGELOG.zh-CN.md",
+                "sha256": "dc62e963c335efff8482a65cb24cf0850ab0503610e680d04a27a4b0efd0564c"
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
       "key": "content-moderation",
       "name": "Content moderation",
       "iconFile": {
